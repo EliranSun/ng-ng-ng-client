@@ -1,0 +1,59 @@
+.popup {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  min-width: 250px;
+  max-height: 400px;
+  display: grid;
+  row-gap: 0;
+  column-gap: 0;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+border-radius: 16px 16px 0 0;
+padding: 15px 20px;
+}
+
+.header-title {
+max-width: 180px;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+}
+
+.info {
+  color: white;
+  background-color: navy;
+}
+
+.success {
+  color: white;
+  background-color: green;
+}
+
+.error {
+  color: white;
+  background-color: tomato;
+}
+
+.warning {
+  color: white;
+  background-color: orange;
+}
+
+.close {
+  margin-right: 0;
+  margin-left: auto;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+}

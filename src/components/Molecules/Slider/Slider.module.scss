@@ -1,0 +1,21 @@
+.slider-wrapper {
+  overflow: hidden;
+  width: 80%;
+  background-color: black;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+}
+
+.image {
+  flex-shrink: 0;
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+}
