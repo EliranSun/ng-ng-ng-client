@@ -1,6 +1,6 @@
 import React from "react";
 
-import Popup from "./Popup";
+import { Popup, Position } from ".";
 
 export default {
   title: "NG-Client / Popup",
@@ -15,6 +15,12 @@ export default {
     },
     title: { control: "text" },
     isCloseable: { control: "boolean" },
+    position: {
+      control: {
+        type: "select",
+        options: [...Object.values(Position)],
+      },
+    },
   },
 };
 

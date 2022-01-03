@@ -1,0 +1,46 @@
+.steps-indicator {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border: 2px solid black;
+  border-radius: 24px;
+  padding: 10px;
+
+  &.active {
+    background-color: black;
+    font-weight: 900;
+    color: white;
+  }
+
+  // &::after {
+  //   position: relative;
+  //   content: '';
+  //   display: inline-block;
+  //   width: 50px;
+  //   height: 1px;
+  //   border-bottom: 1px solid black;
+  //   left: 100%;
+  //   top: 0%;
+  // }
+}
+
+.step-separator {
+  width: 20px;
+  height: 1px;
+  background-color: black;
+}
