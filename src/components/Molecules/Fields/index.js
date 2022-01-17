@@ -1,6 +1,12 @@
-export { default as Username } from "./Username";
-export * from "./Name";
-export { default as Birthdate } from "./Birthdate";
-export { default as Fiscal } from "./Fiscal";
-export { default as Nationality } from "./Nationality";
-export { default as Password } from "./Password";
+export * from "./Name/Name";
+export { default as Username } from "./Username/Username";
+export { default as Birthdate } from "./Birthdate/Birthdate";
+export { default as Nif } from "./Nif/Nif";
+export { default as Fiscal } from "./Fiscal/Fiscal";
+export { default as Nationality } from "./Nationality/Nationality";
+
+export * from "./Email";
+export * from "./PhoneNumber";
+// FIXME:
+export * from "./Password/index";
+export * from "./Currency";

@@ -1,19 +1,20 @@
+$popupIndex: 100;
+
 .popup {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-  max-width: 320px;
-  max-height: fit-content;
+  max-height: 90vh;
   position: fixed;
   border-radius: 16px;
-  // display: flex;
-  // flex-direction: row;
+  z-index: $popupIndex;
+  background-color: white;
 }
 
 .content {
   display: flex;
-  padding: 20px;
-  width: 100%;
+  flex-direction: column;
+  max-width: 100%;
   height: fit-content;
-  width: 100%;
+  justify-content: center;
 }
 
 .center {
@@ -27,4 +28,26 @@
 .bottom-right {
   bottom: 30px;
   right: 30px;
+}
+
+.big {
+  max-width: 640px;
+}
+
+.medium {
+  max-width: 420px;
+}
+
+.small {
+  max-width: 230px;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: $popupIndex - 1;
 }

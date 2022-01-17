@@ -1,11 +1,15 @@
-import logo from '../logo.svg';
-import './App.css';
+import logo from "../logo.svg";
+import "./App.scss";
 
 function App({ primary }) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={ logo } className={ `App-logo ${primary ? '' : 'reverse'}`} alt="logo" />
+        <img
+          src={logo}
+          className={`App-logo ${primary ? "" : "reverse"}`}
+          alt="logo"
+        />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

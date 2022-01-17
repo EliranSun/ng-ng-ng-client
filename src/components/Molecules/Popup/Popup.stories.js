@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Popup, Position } from ".";
 
@@ -24,9 +24,19 @@ export default {
   },
 };
 
-const Template = (args) => <Popup {...args} />;
+const Template = (args) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setIsOpen(true)}>REGISTER</button>
+      <Popup {...args} isOpen={isOpen} onClose={() => setIsOpen(false)} />
+    </div>
+  );
+};
 
 export const Primary = Template.bind({});
+
 Primary.args = {
   title: "Error",
   content:
