@@ -19,8 +19,8 @@ export const StepperContext = createContext({
   previous: () => {},
 });
 
-const Stepper = ({ defaultStepIndex = 0, children, controls }) => {
-  const [currentStep, setCurrentStep] = useState(defaultStepIndex);
+const Stepper = ({ stepIndex = 0, children, controls }) => {
+  const [currentStep, setCurrentStep] = useState(stepIndex);
   const [isLastStep, setIsLastStep] = useState(false);
   const [isFirstStep, setIsFirstStep] = useState(false);
   const onNext = () => {};
@@ -42,6 +42,10 @@ const Stepper = ({ defaultStepIndex = 0, children, controls }) => {
 
     setIsLastStep(false);
   }, [currentStep, childrenArray]);
+
+  useEffect(() => {
+    setCurrentStep(stepIndex);
+  }, [stepIndex]);
 
   if (childrenArray.length === 0) {
     return null;

@@ -60,11 +60,17 @@ const Input = ({
             {placeholder}
           </option>
 
-          {options.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
+          {options.map((option) =>
+            typeof option === "string" ? (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ) : (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            )
+          )}
         </select>
         {isHintView && !!hints.length && <Hint>{hints[0]}</Hint>}
         {isErrorView && <Error>{errors[0]}</Error>}

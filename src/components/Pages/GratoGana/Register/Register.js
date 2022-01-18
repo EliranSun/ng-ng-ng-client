@@ -2,9 +2,7 @@ import { useState } from "react";
 import { Register } from "../../../Organisms";
 import { Stepper, Fields } from "../../../Molecules";
 import { useTheme } from "../../../../hooks";
-import { withTheme } from "../../../../HOC";
-import { Theme } from "../../../../constants";
-// TODO: better names?
+// TODO: better names
 import { STEP_ONE, STEP_TWO, STEP_THREE } from "../../../../constants";
 
 const FieldNames = {
@@ -19,11 +17,11 @@ const FieldNames = {
   ],
   [STEP_TWO]: [
     "Nationality",
-    // "Email",
-    // "PhoneNumber",
-    // "Password",
-    // "RepeatPassword",
-    // "Currency",
+    "Email",
+    "PhoneNumber",
+    "Password",
+    "RepeatPassword",
+    "Currency",
   ],
   [STEP_THREE]: [
     "Gender",
@@ -109,7 +107,7 @@ const GratoganaRegister = ({ isOpen, onClose, stepIndex }) => {
       headerBgColor={theme.PRIMARY}
       headerTextColor={theme.PRIMARY_TEXT}>
       <Stepper
-        defaultStepIndex={stepIndex} // TODO: better
+        stepIndex={stepIndex} // TODO: better
         controls={
           <div className="flex flex-col">
             <Stepper.Next
