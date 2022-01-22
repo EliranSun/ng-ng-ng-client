@@ -13,6 +13,7 @@ const Email = () => {
     <div>
       <Input
         validate={emailValidation}
+        placeholder="Email"
         type={InputType.TEXT}
         errors={["email address invalid"]}
       />

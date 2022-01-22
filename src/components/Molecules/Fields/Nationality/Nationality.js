@@ -257,9 +257,9 @@ const Nationalities = [
 const Nationality = ({ ...rest }) => (
   <div className="p-r-20 p-l-20">
     <Input
+      placeholder="Nacionalidad"
       options={Nationalities}
       type={InputType.SELECT}
-      placeholder="Nacionalidad"
       validate={(value) => value !== ""}
       {...rest}
     />

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import classnames from "classnames";
+import Select from "./Select";
 
 import styles from "./Input.module.scss";
+import AutoCompleteInput from "./AutoCompleteInput";
 
 export const InputType = {
   SELECT: "select",
@@ -26,6 +28,7 @@ const Input = ({
   placeholder,
   onChange = () => {},
   validate = () => {},
+  isAutoComplete,
   ...rest
 }) => {
   const [isHintView, setIsHintView] = useState(false);
@@ -45,36 +48,22 @@ const Input = ({
 
   console.log({ isErrorView, isValid, errors });
 
-  // TODO: refactor this, too much similarity with the render value afterwards
   if (type === InputType.SELECT && options.length) {
-    return (
-      <div className={styles["input-wrapper"]}>
-        <select
-          onChange={handleValidity}
-          className={classnames(styles.input, styles.select, {
-            [styles.error]: isErrorView,
-            [styles.valid]: isValid,
-          })}>
-          {/* TODO: Warning: Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>. */}
-          <option value="" disabled selected>
-            {placeholder}
-          </option>
+    if (isAutoComplete) {
+      return <AutoCompleteInput options={options} placeholder={placeholder} />;
+    }
 
-          {options.map((option) =>
-            typeof option === "string" ? (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ) : (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            )
-          )}
-        </select>
-        {isHintView && !!hints.length && <Hint>{hints[0]}</Hint>}
-        {isErrorView && <Error>{errors[0]}</Error>}
-      </div>
+    return (
+      <Select
+        options={options}
+        placeholder={placeholder}
+        onChange={handleValidity}
+        isErrorView={isErrorView}
+        isHintView={isHintView}
+        isValid={isValid}
+        errors={errors}
+        hints={hints}
+      />
     );
   }
 

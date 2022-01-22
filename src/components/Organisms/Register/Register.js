@@ -1,4 +1,5 @@
 import { Popup } from "../../../components/Molecules";
+import withQueryClient from "../../../HOC/withQueryClient";
 
 import styles from "./Register.module.scss";
 
@@ -22,4 +23,4 @@ const Register = ({
   );
 };
 
-export default Register;
+export default withQueryClient(Register);
