@@ -18,7 +18,7 @@ const Select = ({
 }) => {
   const selectRef = useRef(null);
   const [selectedValue, setSelectedValue] = useState(null);
-  const [isOpen, setIsOpen] = useState(isInitOpen);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const clickHandler = (event) => {
@@ -33,9 +33,9 @@ const Select = ({
     };
   }, []);
 
-  useEffect(() => {
-    setIsOpen(isInitOpen);
-  }, [isInitOpen]);
+  // useEffect(() => {
+  //   setIsOpen(isInitOpen);
+  // }, [isInitOpen]);
 
   return (
     <div className={styles["input-wrapper"]}>
@@ -59,7 +59,7 @@ const Select = ({
           {selectedValue || placeholder}
         </li>
         <div className={styles.selectOptions}>
-          {isOpen &&
+          {(isInitOpen || isOpen) &&
             options.map((option, index) => {
               const value = typeof option === "string" ? option : option.value;
               const label = option.label || option;
