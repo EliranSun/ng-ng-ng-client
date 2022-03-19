@@ -188,7 +188,9 @@ const GratoganaRegister = ({ isOpen, onClose, stepIndex, children }) => {
           }
         />
       </Stepper>
-      <button>NEXT</button>
+      {/* // TODO: stepper buttons that will to exactly that */}
+      <button onClick={next}>NEXT</button>
+      <button onClick={prev}>PREV</button>
     </Register>
   );
 };
