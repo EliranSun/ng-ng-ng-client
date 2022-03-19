@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Register } from "../../../Organisms";
 import { Stepper, Fields } from "../../../Molecules";
 import { useTheme } from "../../../../hooks";
 // TODO: better names
 import { STEP_ONE, STEP_TWO, STEP_THREE } from "../../../../constants";
+import { FlowContext } from "../../../Organisms/Flow";
 
 const FieldNames = {
   [STEP_ONE]: [
@@ -79,7 +80,8 @@ const Step = ({ stepName, onChange, additionalComponents }) => {
 //   );
 // };
 
-const GratoganaRegister = ({ isOpen, onClose, stepIndex }) => {
+const GratoganaRegister = ({ isOpen, onClose, stepIndex, children }) => {
+  const { next, prev } = useContext(FlowContext);
   const [isFormValid, setIsFormValid] = useState(false);
   const [fields, setFields] = useState({});
   const theme = useTheme();
@@ -186,6 +188,7 @@ const GratoganaRegister = ({ isOpen, onClose, stepIndex }) => {
           }
         />
       </Stepper>
+      <button>NEXT</button>
     </Register>
   );
 };

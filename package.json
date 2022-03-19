@@ -21,7 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": [
@@ -69,7 +70,8 @@
     "faker": "^5.5.3",
     "msw": "^0.35.0",
     "msw-storybook-addon": "^1.4.1",
-    "rosie": "^2.1.0"
+    "rosie": "^2.1.0",
+    "source-map-explorer": "^2.5.2"
   },
   "msw": {
     "workerDirectory": "public"

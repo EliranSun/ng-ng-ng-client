@@ -51,7 +51,7 @@ const getPositions = (imageUrls = [], isInfinite) => {
 const Slider = ({ duration, isControllable, isInfinite }) => {
   const imageElement = useRef(null);
   // TODO: add api to get images
-  const { imageUrls = [], isLoading } = useSliderData();
+  const { imageUrls = [], isLoading } = useSliderData(); // TODO: callback? is called a lot
   const [slideIndex, setSlideIndex] = useState(0);
   const positions = getPositions(imageUrls);
 
@@ -99,8 +99,7 @@ const Slider = ({ duration, isControllable, isInfinite }) => {
             <Button
               onClick={() => {
                 slide(Directions.REVERSE);
-              }}
-            >
+              }}>
               {"<"}
             </Button>
           )}
@@ -108,8 +107,7 @@ const Slider = ({ duration, isControllable, isInfinite }) => {
             <Button
               onClick={() => {
                 slide(Directions.NORMAL);
-              }}
-            >
+              }}>
               {">"}
             </Button>
           )}
