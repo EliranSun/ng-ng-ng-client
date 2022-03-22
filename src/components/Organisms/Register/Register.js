@@ -1,4 +1,3 @@
-import { Popup } from "../../../components/Molecules";
 import withQueryClient from "../../../HOC/withQueryClient";
 
 import styles from "./Register.module.scss";
@@ -12,14 +11,10 @@ const Register = ({
   onClose,
 }) => {
   return (
-    <Popup
-      title="Register"
-      isOpen={isOpen}
-      onClose={onClose}
-      headerBgColor={headerBgColor}
-      headerTextColor={headerTextColor}>
-      <div className={styles.register}>{children}</div>
-    </Popup>
+    <div className={styles.register}>
+      <h1>Register</h1>
+      <div>{children}</div>
+    </div>
   );
 };
 

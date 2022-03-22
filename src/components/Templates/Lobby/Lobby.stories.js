@@ -4,7 +4,7 @@ import { datatype, random } from "faker";
 import Lobby from "./Lobby";
 
 export default {
-  title: "NG-Client / Lobby",
+  title: "Templates / Lobby",
   component: Lobby,
   argTypes: {
     imageUrls: { control: { type: "array", items: { type: "string" } } },
