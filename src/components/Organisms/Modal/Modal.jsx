@@ -25,12 +25,10 @@ export const withModalProvider = (Component) => {
   );
 };
 
-const useModal = () => {};
-
-const Modal = ({ isOpen = false, children }) => {
+const Modal = ({ isOpen = false, children, onClose }) => {
   return (
     <dialog open={isOpen}>
-      <Header />
+      <Header onClose={onClose} />
       <div>{children}</div>
       <Footer />
     </dialog>
