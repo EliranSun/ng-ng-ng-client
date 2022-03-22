@@ -1,8 +1,19 @@
 .button {
-  width: 80%;
+  min-width: 50px;
+  height: 48px;
   margin: 12px auto;
   border: none;
-  height: 48px;
   border-radius: 16px;
-  font-size: 1.3em;
+  font-size: 1.1em;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+  }
 }

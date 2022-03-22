@@ -1,12 +1,14 @@
 import React from "react";
 import { Slider, GameCategories } from "../../Molecules";
+import { SiteHeader } from "../../Organisms";
 
 const Lobby = () => {
   return (
-    <div>
+    <>
+      <SiteHeader />
       <Slider />
       <GameCategories />
-    </div>
+    </>
   );
 };
 
