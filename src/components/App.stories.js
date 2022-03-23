@@ -1,22 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import App from './App';
+import App from "./App";
+import { withProvider } from "../utils/intl";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/App',
+  title: "Example/App",
   component: App,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
+  decorators: [withProvider],
 };
 
-const Template = (args) => <App { ...args } />;
+const Template = (args) => <App {...args} />;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   primary: true,
-  label: 'App',
+  label: "App",
 };
