@@ -1,5 +1,8 @@
 {
   "header": {
     "login": "Login"
+  },
+  "fields": {
+    "birthdate": "Birthdate"
   }
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import classNames from "classnames";
 import { Input, InputType } from "../../../Atoms";
+import { FormatMessage } from "../../../../utils/intl";
 
 import styles from "../Fields.module.scss";
 
@@ -80,7 +81,9 @@ const Birthdate = ({ onChange = () => {} }) => {
   // techincally speaking.
   return (
     <div className="bg-co-grey p-r-20 p-l-20 p-t-8 p-b-16 m-b-16">
-      <p className="m-0">Birthdate</p>
+      <p className="m-0">
+        <FormatMessage id="fields.birthdate" />
+      </p>
       <div className={styles.birthdate}>
         <div className={classNames("p-r-20 p-l-20", styles.date)}>
           <Input
