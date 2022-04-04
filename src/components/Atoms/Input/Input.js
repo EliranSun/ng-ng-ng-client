@@ -1,9 +1,9 @@
 import { useState } from "react";
 import classnames from "classnames";
 import Select from "./Select";
+import AutoCompleteInput from "./AutoCompleteInput";
 
 import styles from "./Input.module.scss";
-import AutoCompleteInput from "./AutoCompleteInput";
 
 export const InputType = {
   SELECT: "select",

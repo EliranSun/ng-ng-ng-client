@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Register } from ".";
 import { withTheme } from "../../../../HOC";
 import { Theme } from "../../../../constants";
+import { withProvider } from "../../../../utils/intl";
 
 export default {
   title: "NG-Client / GratoGana / Register",
   component: Register,
+  decorators: [withProvider],
   argTypes: {
     stepIndex: {
       options: [0, 1, 2],

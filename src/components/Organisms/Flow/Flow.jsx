@@ -41,7 +41,7 @@ const useFlow = ({ flowStepsCount, onFlowEnd = () => {} }) => {
   return { stepIndex, setStepIndex, next, prev };
 };
 
-export const FlowContext = createContext();
+export const FlowContext = createContext({});
 
 export const FlowNames = {
   REGISTER_FLOW: "REGISTER_FLOW",
