@@ -6,10 +6,12 @@ import {
   useContext,
   useEffect,
 } from "react";
-import classnames from "classnames";
 import { Button } from "../../Atoms";
 
 import styles from "./Stepper.module.scss";
+import StepperProgress from "./StepperProgress";
+
+// TODO: split to different components
 
 // TODO: this is currently shared, but need to be initiated each time stepper/its context are being used
 export const StepperContext = createContext({
@@ -17,9 +19,11 @@ export const StepperContext = createContext({
   isFirstStep: true,
   next: () => {},
   previous: () => {},
+  currentStep: 0,
+  steps: [],
 });
 
-const Stepper = ({ stepIndex = 0, children, controls }) => {
+const Stepper = ({ withProgress, stepIndex = 0, children, controls }) => {
   const [currentStep, setCurrentStep] = useState(stepIndex);
   const [isLastStep, setIsLastStep] = useState(false);
   const [isFirstStep, setIsFirstStep] = useState(false);
@@ -59,30 +63,16 @@ const Stepper = ({ stepIndex = 0, children, controls }) => {
         isLastStep,
         isFirstStep,
         currentStep,
+        steps: childrenArray,
       }}>
-      <div className={styles["steps-indicator"]}>
-        {childrenArray.map((child, index) => {
-          // TODO: key
-          return (
-            <>
-              <span
-                className={classnames(styles.step, {
-                  [styles.active]: currentStep === index,
-                })}>
-                {index + 1}
-              </span>
-              {index < childrenArray.length - 1 && (
-                <span className={styles["step-separator"]} />
-              )}
-            </>
-          );
-        })}
-      </div>
+      {withProgress && <StepperProgress />}
       <div className={styles.content}>
         {cloneElement(childrenArray[currentStep], {
-          onNext,
-          onPrevious,
           key: currentStep,
+          props: {
+            onNext,
+            onPrevious,
+          },
         })}
       </div>
       {controls || (
