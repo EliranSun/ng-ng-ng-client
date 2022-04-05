@@ -1,3 +1,4 @@
+// TODO: index
 export * from "./Name/Name";
 export { default as Username } from "./Username/Username";
 export { default as Birthdate } from "./Birthdate/Birthdate";
@@ -7,6 +8,5 @@ export { default as Nationality } from "./Nationality/Nationality";
 
 export * from "./Email";
 export * from "./PhoneNumber";
-// FIXME:
-export * from "./Password/index";
+export * from "./Password";
 export * from "./Currency";
