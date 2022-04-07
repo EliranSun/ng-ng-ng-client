@@ -14,6 +14,13 @@ const JuridictionRegister = {
 // there's one more thing to this - the same code will be relevant for login, games, modals etc.
 // so it'll be scattered across the app this way, instead of being in one place. If there will be a bug or
 // a change requirement, it wont be easy to find, fix and replace this way.
+
+// BUT! any change requirement actually WILL be specific per feature.
+// and this way the code will be more readable and maintainable. Same with bugs
+// actually. If there's a bug, why would it be all over the place and not specifically for the registration
+// logic here?
+
+// TODO: Let's think about it
 const Register = (props) => {
   const { jurisdiction } = useContext(JurisdictionContext);
 
