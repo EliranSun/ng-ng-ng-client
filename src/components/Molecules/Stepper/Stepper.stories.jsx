@@ -2,7 +2,7 @@ import React from "react";
 import Stepper from "./Stepper";
 
 export default {
-  title: "components / Stepper / Progress",
+  title: "Molecules / Stepper / Progress",
   component: Stepper,
   argTypes: {
     numberOfSteps: { control: "number", defaultValue: 3 },

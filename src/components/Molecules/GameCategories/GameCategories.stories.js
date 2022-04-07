@@ -5,7 +5,7 @@ import GameCategories from "./GameCategories";
 import GameCategoriesFactory from "../../../factories/GameCategoriesFactory";
 
 export default {
-  title: "NG-Client / GameCategories",
+  title: "Molecules / GameCategories",
   component: GameCategories,
   argTypes: {
     categories: { control: "array" },

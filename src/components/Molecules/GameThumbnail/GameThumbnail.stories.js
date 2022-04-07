@@ -4,7 +4,7 @@ import { random } from "faker";
 import GameThumbnail from "./GameThumbnail";
 
 export default {
-  title: "NG-Client / GameThumbnail",
+  title: "Molecules / GameThumbnail",
   component: GameThumbnail,
   argTypes: {
     imageUrl: { control: "text" },

@@ -1,7 +1,7 @@
 import { Birthdate } from "..";
 
 export default {
-  title: "NG-Client / Components / Molecules / Birthdate",
+  title: "Molecules / Birthdate",
   component: Birthdate,
   argTypes: {},
 };
