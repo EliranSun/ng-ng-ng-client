@@ -5,7 +5,7 @@ import {
   Children,
   useEffect,
 } from "react";
-import { Register } from "../../Templates";
+import { Register } from "../../Pages";
 import { DepositLimits } from "../DepositLimits";
 import { RealityCheck } from "../RealityCheck";
 import { Modal } from "../Modal";

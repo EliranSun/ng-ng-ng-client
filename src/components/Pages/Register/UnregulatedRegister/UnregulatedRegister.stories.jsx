@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { SpainRegister } from ".";
+import { UnregulatedRegister } from ".";
 // import { withTheme } from "../../../HOC";
 // import { Theme } from "../../../constants";
 import { withProvider } from "../../../../utils/intl";
 
 export default {
-  title: "Pages / Register / Spain",
-  component: SpainRegister,
+  title: "Pages / Register / Unregulated",
+  component: UnregulatedRegister,
   decorators: [withProvider],
   argTypes: {
     stepIndex: {
@@ -30,12 +30,12 @@ const Template = (args) => {
   return (
     <div>
       <button onClick={() => setIsOpen(true)}>REGISTER</button>
-      <SpainRegister />
+      <UnregulatedRegister />
     </div>
   );
 };
 
-export const Spain = Template.bind({});
-Spain.args = {
+export const Unregulated = Template.bind({});
+Unregulated.args = {
   stepIndex: 0,
 };

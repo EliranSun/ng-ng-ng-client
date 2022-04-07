@@ -8,7 +8,7 @@ export const JurisdictionContext = createContext({
 });
 
 export const JurisdictionProvider = ({ children }) => {
-  const [jurisdiction, setJurisdiction] = useState("");
+  const [jurisdiction, setJurisdiction] = useState(JurisdictionTypes.Spain);
 
   const handleJurisdictionChange = (jurisdiction) => {
     setJurisdiction(jurisdiction);
