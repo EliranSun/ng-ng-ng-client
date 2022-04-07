@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SpainRegister } from ".";
 // import { withTheme } from "../../../HOC";
 // import { Theme } from "../../../constants";
-import { withProvider } from "../../../utils/intl";
+import { withProvider } from "../../../../utils/intl";
 
 export default {
   title: "Pages / Register / Spain",

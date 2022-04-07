@@ -6,7 +6,7 @@ import {
   Birthdate,
   Nif,
   Fiscal,
-} from "../../../Molecules";
+} from "../../../../Molecules";
 
 const CreateAccount = () => {
   return (
