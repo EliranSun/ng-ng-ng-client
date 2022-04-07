@@ -5,7 +5,7 @@ import {
   Password,
   RepeatPassword,
   Currency,
-} from "../../../Molecules";
+} from "../../../../Molecules";
 
 const RegisterDetails = () => {
   return (

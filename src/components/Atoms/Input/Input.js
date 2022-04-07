@@ -12,11 +12,11 @@ export const InputType = {
 };
 
 // TODO: Translations
-const Hint = ({ children }) => {
+export const Hint = ({ children }) => {
   return <div className={styles.hint}>{children}</div>;
 };
 
-const Error = ({ children }) => {
+export const Error = ({ children }) => {
   return <div className={styles.error}>{children}</div>;
 };
 
