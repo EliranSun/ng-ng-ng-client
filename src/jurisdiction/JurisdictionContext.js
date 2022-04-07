@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, useEffect, createContext } from "react";
 import noop from "lodash.noop";
 import { JurisdictionTypes } from "./constants";
 
@@ -7,8 +7,15 @@ export const JurisdictionContext = createContext({
   handleJurisdictionChange: noop,
 });
 
-export const JurisdictionProvider = ({ children }) => {
-  const [jurisdiction, setJurisdiction] = useState(JurisdictionTypes.Spain);
+export const JurisdictionProvider = ({
+  jurisdiction: initJurisdiction = JurisdictionTypes.Spain,
+  children,
+}) => {
+  const [jurisdiction, setJurisdiction] = useState(initJurisdiction);
+
+  useEffect(() => {
+    setJurisdiction(initJurisdiction);
+  }, [initJurisdiction]);
 
   const handleJurisdictionChange = (jurisdiction) => {
     setJurisdiction(jurisdiction);
