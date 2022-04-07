@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Popup, Position } from ".";
 
 export default {
-  title: "NG-Client / Popup",
+  title: "Molecules / Popup",
   component: Popup,
   argTypes: {
     content: { control: "text" },

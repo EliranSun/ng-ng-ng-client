@@ -12,7 +12,7 @@ initializeWorker();
 addDecorator(mswDecorator);
 
 export default {
-  title: "NG-Client / Slider",
+  title: "Molecules / Slider",
   component: Slider,
   argTypes: {
     imageUrls: { control: { type: "array", items: { type: "string" } } },
