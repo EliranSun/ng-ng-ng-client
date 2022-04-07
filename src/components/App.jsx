@@ -4,15 +4,15 @@ import { Lobby } from "./Templates/Lobby";
 import "./App.scss";
 import { JurisdictionProvider } from "../jurisdiction/JurisdictionContext";
 
-function App() {
+const App = ({ jurisdiction }) => {
   return (
-    <JurisdictionProvider>
+    <JurisdictionProvider jurisdiction={jurisdiction}>
       <FlowProvider>
         <Lobby />
         <FlowModal />
       </FlowProvider>
     </JurisdictionProvider>
   );
-}
+};
 
 export default App;

@@ -1,21 +1,22 @@
 import React from "react";
 
-import App from "./App";
+import AppComponent from "./App";
 import { withProvider } from "../utils/intl";
+// TODO: better name than types?
+import { JurisdictionTypes } from "../jurisdiction";
 
 export default {
   title: "App",
-  component: App,
+  component: AppComponent,
   argTypes: {
-    backgroundColor: { control: "color" },
+    jurisdiction: {
+      control: "select",
+      options: Object.values(JurisdictionTypes),
+    },
   },
   decorators: [withProvider],
 };
 
-const Template = (args) => <App {...args} />;
+const Template = (args) => <AppComponent {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: "App",
-};
+export const App = Template.bind({});

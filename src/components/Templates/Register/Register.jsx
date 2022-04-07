@@ -56,9 +56,11 @@ const Register = ({ children }) => {
 
   // TODO: another solution than branching? maybe it's not that bad
   if (children) {
-    <Stepper withProgress controls={controls}>
-      {children}
-    </Stepper>;
+    return (
+      <Stepper withProgress controls={controls}>
+        {children}
+      </Stepper>
+    );
   }
 
   return (
