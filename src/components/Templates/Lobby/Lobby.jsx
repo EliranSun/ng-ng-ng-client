@@ -1,6 +1,6 @@
 import React from "react";
 import { Slider, GameCategories } from "../../Molecules";
-import { SiteHeader } from "../../Organisms";
+import { SiteHeader, FlowModal } from "../../Organisms";
 
 const Lobby = () => {
   return (
@@ -8,6 +8,7 @@ const Lobby = () => {
       <SiteHeader />
       <Slider />
       <GameCategories />
+      <FlowModal />
     </>
   );
 };
