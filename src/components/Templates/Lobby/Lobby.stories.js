@@ -1,11 +1,12 @@
 import React from "react";
 import { datatype, random } from "faker";
-
+import { withIntlProvider } from "../../../HOC";
 import Lobby from "./Lobby";
 
 export default {
   title: "Templates / Lobby",
   component: Lobby,
+  decorators: [withIntlProvider],
   argTypes: {
     imageUrls: { control: { type: "array", items: { type: "string" } } },
   },

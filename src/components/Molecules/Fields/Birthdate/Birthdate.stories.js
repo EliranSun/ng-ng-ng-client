@@ -1,13 +1,11 @@
-import { Birthdate } from "..";
+import { Birthdate as BirthdateComponent } from "..";
+import { withIntlProvider } from "../../../../HOC";
 
 export default {
   title: "Molecules / Birthdate",
-  component: Birthdate,
+  component: BirthdateComponent,
   argTypes: {},
+  decorators: [withIntlProvider],
 };
 
-const Template = (args) => <Birthdate />;
-
-export const Primary = Template.bind({});
-
-Primary.args = {};
+export const Birthdate = (args) => <BirthdateComponent {...args} />;
