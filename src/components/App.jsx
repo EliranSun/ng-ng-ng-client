@@ -1,4 +1,4 @@
-import { FlowModal, FlowProvider } from "./Organisms/Flow";
+import { FlowProvider } from "./Organisms/Flow";
 import { Lobby } from "./Templates/Lobby";
 
 import "./App.scss";
@@ -9,7 +9,6 @@ const App = ({ jurisdiction }) => {
     <JurisdictionProvider jurisdiction={jurisdiction}>
       <FlowProvider>
         <Lobby />
-        <FlowModal />
       </FlowProvider>
     </JurisdictionProvider>
   );
