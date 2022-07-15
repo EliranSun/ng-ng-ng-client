@@ -6,7 +6,7 @@ import {
   useContext,
   useEffect,
 } from "react";
-import { Button } from "../../Atoms";
+import { Button } from "../../atoms";
 
 import styles from "./Stepper.module.scss";
 import StepperProgress from "./StepperProgress";

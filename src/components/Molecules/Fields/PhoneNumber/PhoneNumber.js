@@ -1,4 +1,4 @@
-import { Input, InputType } from "../../../Atoms";
+import { Input, InputType } from "../../../atoms";
 // TODO: api this? or remove and use json
 // import { usePhoneCode } from "../../../../hooks";
 

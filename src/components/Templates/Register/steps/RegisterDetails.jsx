@@ -4,7 +4,7 @@ import {
   Password,
   PhoneNumber,
   RepeatPassword,
-} from "../../../Molecules";
+} from "../../../molecules";
 
 const RegisterDetails = () => {
   return (

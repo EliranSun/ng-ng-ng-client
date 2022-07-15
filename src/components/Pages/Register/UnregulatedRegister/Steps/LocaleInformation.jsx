@@ -6,7 +6,7 @@ import {
   City,
   PromotionalContent,
   TermsAndPolicy,
-} from "../../../../Molecules";
+} from "../../../../molecules";
 
 const ThirdStep = () => {
   return (

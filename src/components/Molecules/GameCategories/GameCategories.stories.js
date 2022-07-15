@@ -1,5 +1,5 @@
 import React from "react";
-import { datatype, random, commerce, name } from "faker";
+import { faker } from "@faker-js/faker";
 
 import GameCategories from "./GameCategories";
 import GameCategoriesFactory from "../../../factories/GameCategoriesFactory";
@@ -18,6 +18,6 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   categories: GameCategoriesFactory.buildList(
-    datatype.number({ min: 2, max: 5 })
+    faker.datatype.number({ min: 2, max: 5 })
   ),
 };

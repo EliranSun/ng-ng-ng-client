@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import withQueryClient from "../../../HOC/withQueryClient";
-import { Button } from "../../Atoms/Button";
+import { Button } from "../../atoms/Button";
 import { useSliderData } from "../../../hooks";
-import { Loader } from "../../Atoms/Skeleton";
+import { Loader } from "../../atoms/Skeleton";
 
 import styles from "./Slider.module.scss";
 

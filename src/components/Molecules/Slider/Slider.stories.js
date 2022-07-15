@@ -1,5 +1,4 @@
 import React from "react";
-import { datatype, random } from "faker";
 import { rest } from "msw";
 import { initializeWorker, mswDecorator } from "msw-storybook-addon";
 import { addDecorator } from "@storybook/react";

@@ -1,4 +1,4 @@
-import { Input } from "../../../Atoms";
+import { Input } from "../../../atoms";
 
 // username regex validation, 6-14 characters, no spaces, no special characters.
 // TODO: regex by brand/jurisdiction

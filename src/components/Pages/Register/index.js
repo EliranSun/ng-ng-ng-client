@@ -1,8 +1,11 @@
 import { useContext } from "react";
-import { JurisdictionContext, JurisdictionTypes } from "../../../jurisdiction";
+import {
+  JurisdictionContext,
+  JurisdictionTypes,
+} from "../../../features/jurisdiction";
 import { SpainRegister } from "./SpainRegister";
 import { UnregulatedRegister } from "./UnregulatedRegister";
-import { Register as RegisterTemplate } from "../../Templates";
+import { Register as RegisterTemplate } from "../../templates";
 
 const JuridictionRegister = {
   [JurisdictionTypes.Spain]: SpainRegister,

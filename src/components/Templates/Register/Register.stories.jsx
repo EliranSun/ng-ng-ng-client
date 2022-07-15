@@ -1,5 +1,5 @@
 import React from "react";
-import { withProvider } from "../../../utils/intl";
+import { withProvider } from "../../../lib/intl";
 import RegisterComponent from "./Register";
 
 export default {

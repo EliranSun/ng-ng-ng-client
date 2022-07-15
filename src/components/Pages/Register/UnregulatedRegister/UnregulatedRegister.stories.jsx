@@ -2,7 +2,7 @@ import { useState } from "react";
 import { UnregulatedRegister } from ".";
 // import { withTheme } from "../../../HOC";
 // import { Theme } from "../../../constants";
-import { withProvider } from "../../../../utils/intl";
+import { withProvider } from "../../../../lib/intl";
 
 export default {
   title: "Pages / Register / Unregulated",

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider as IntlProvider } from "./utils/intl";
+import { Provider as IntlProvider } from "./lib/intl";
 
 ReactDOM.render(
   <React.StrictMode>

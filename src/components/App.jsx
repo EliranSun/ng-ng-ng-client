@@ -1,16 +1,13 @@
-import { FlowProvider } from "./Organisms/Flow";
-import { Lobby } from "./Templates/Lobby";
+import { Lobby } from "./templates/Lobby";
+import { AppProvider } from "../providers";
 
 import "./App.scss";
-import { JurisdictionProvider } from "../jurisdiction/JurisdictionContext";
 
-const App = ({ jurisdiction }) => {
+const App = () => {
   return (
-    <JurisdictionProvider jurisdiction={jurisdiction}>
-      <FlowProvider>
-        <Lobby />
-      </FlowProvider>
-    </JurisdictionProvider>
+    <AppProvider>
+      <Lobby />
+    </AppProvider>
   );
 };
 

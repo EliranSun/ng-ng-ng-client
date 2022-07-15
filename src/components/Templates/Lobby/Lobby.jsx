@@ -1,6 +1,6 @@
 import React from "react";
-import { Slider, GameCategories } from "../../Molecules";
-import { SiteHeader, FlowModal } from "../../Organisms";
+import { Slider, GameCategories } from "../../molecules";
+import { SiteHeader, FlowModal } from "../../organisms";
 
 const Lobby = () => {
   return (

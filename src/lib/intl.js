@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider as Provider, FormattedMessage } from "react-intl";
 import en from "../copies/en.json";
-import { ErrorBoundary } from "./error";
+import { ErrorBoundary } from "../utils/error";
 
 export const flattenMessages = (nestedMessages, prefix = "") => {
   if (nestedMessages === null) {
@@ -21,7 +21,7 @@ export const flattenMessages = (nestedMessages, prefix = "") => {
   }, {});
 };
 
-export const Provider = ({ children }) => {
+export const IntlProvider = ({ children }) => {
   const [messages, setMessages] = useState(en);
   useEffect(() => {
     const lang = localStorage.getItem("lang") || "en";
@@ -29,9 +29,9 @@ export const Provider = ({ children }) => {
   }, [messages]);
 
   return (
-    <IntlProvider locale="en" messages={flattenMessages(messages)}>
+    <Provider locale="en" messages={flattenMessages(messages)}>
       {children}
-    </IntlProvider>
+    </Provider>
   );
 };
 
@@ -49,8 +49,8 @@ export const FormatMessage = ({ id, values }) => {
 
 export const withProvider = (Component) => {
   return (
-    <Provider>
+    <IntlProvider>
       <Component />
-    </Provider>
+    </IntlProvider>
   );
 };

@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import { Footer, Header } from "../../Molecules";
+import { Footer, Header } from "../../molecules";
 
 // TODO: move to context file
 const Context = createContext({
