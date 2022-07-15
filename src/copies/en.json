@@ -1,6 +1,8 @@
 {
   "header": {
-    "login": "Login"
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Join"
   },
   "fields": {
     "birthdate": "Birthdate"

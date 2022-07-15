@@ -1,10 +1,10 @@
-import { Provider } from "../lib/intl";
+import { IntlProvider } from "../lib/intl";
 
 const withProvider = (Component) => {
   return (
-    <Provider>
+    <IntlProvider>
       <Component />
-    </Provider>
+    </IntlProvider>
   );
 };
 

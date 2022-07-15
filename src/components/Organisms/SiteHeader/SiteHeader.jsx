@@ -1,16 +1,11 @@
-import { useContext } from "react";
-import { Button } from "../../atoms";
-import { FlowContext, FlowNames } from "../Flow";
-import { FormatMessage } from "../../../lib/intl";
+import { LoginButton, Logo, RegisterButton } from "../../atoms";
 
 const SiteHeader = () => {
-  const { setFlowName } = useContext(FlowContext);
-
   return (
     <header>
-      <Button onClick={() => setFlowName(FlowNames.LOGIN)}>
-        <FormatMessage id="header.login" />
-      </Button>
+      <Logo />
+      <LoginButton />
+      <RegisterButton />
     </header>
   );
 };
