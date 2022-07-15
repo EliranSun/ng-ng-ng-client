@@ -1,4 +1,4 @@
-import { Input, InputType } from "../../../Atoms";
+import { Input, InputType } from "../../../atoms";
 
 const Nationalities = [
   { value: "AFGHAN", label: "Afgana" },

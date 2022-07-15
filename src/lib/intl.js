@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import en from "../copies/en.json";
-import { ErrorBoundary } from "./error";
+import { ErrorBoundary } from "../utils/error";
 
 export const flattenMessages = (nestedMessages, prefix = "") => {
   if (nestedMessages === null) {

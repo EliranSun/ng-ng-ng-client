@@ -1,6 +1,6 @@
-import { FlowContext } from "../../Organisms/Flow";
+import { FlowContext } from "../../organisms/Flow";
 import { useContext } from "react";
-import { Stepper } from "../../Molecules";
+import { Stepper } from "../../molecules";
 import { useTheme } from "../../../hooks";
 import { CreateAccount, RegisterDetails } from "./steps";
 const Register = ({ children }) => {

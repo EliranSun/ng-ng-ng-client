@@ -4,7 +4,7 @@ import {
   LastName,
   MiddleName,
   Username,
-} from "../../../Molecules";
+} from "../../../molecules";
 
 const CreateAccount = () => {
   return (

@@ -1,6 +1,6 @@
 // 04164947S
 // TODO: Input type should be on constants?
-import { Input, InputType } from "../../../Atoms";
+import { Input, InputType } from "../../../atoms";
 
 const isDni = (value) => {
   const dniLetters = "TRWAGMYFPDXBNJZSQVHLCKE";

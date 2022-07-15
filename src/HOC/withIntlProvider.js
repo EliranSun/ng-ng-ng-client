@@ -1,4 +1,4 @@
-import { Provider } from "../utils/intl";
+import { Provider } from "../lib/intl";
 
 const withProvider = (Component) => {
   return (

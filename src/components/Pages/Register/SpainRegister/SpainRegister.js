@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Register } from "../../../Templates";
+import { Register } from "../../../templates";
 import { CreateAccount, RegisterDetails, LocaleInformation } from "./Steps";
 
 const SpainRegister = ({ isOpen, onClose, stepIndex, children }) => {

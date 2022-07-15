@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classNames from "classnames";
-import { Input, InputType } from "../../../Atoms";
-import { FormatMessage } from "../../../../utils/intl";
+import { Input, InputType } from "../../../atoms";
+import { FormatMessage } from "../../../../lib/intl";
 
 import styles from "../Fields.module.scss";
 

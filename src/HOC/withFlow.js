@@ -1,4 +1,4 @@
-import { FlowProvider } from "../components/Organisms/Flow";
+import { FlowProvider } from "../components/organisms/Flow";
 
 const withFlow = (Component) => {
   return (

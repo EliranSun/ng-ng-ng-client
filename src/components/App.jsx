@@ -1,5 +1,5 @@
-import { FlowProvider } from "./Organisms/Flow";
-import { Lobby } from "./Templates/Lobby";
+import { FlowProvider } from "./organisms/Flow";
+import { Lobby } from "./templates/Lobby";
 
 import "./App.scss";
 import { JurisdictionProvider } from "../features/jurisdiction";

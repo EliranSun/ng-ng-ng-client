@@ -1,9 +1,9 @@
 import React from "react";
 
 import AppComponent from "./App";
-import { withProvider } from "../utils/intl";
+import { withProvider } from "../lib/intl";
 // TODO: better name than types?
-import { JurisdictionTypes } from "../jurisdiction";
+import { JurisdictionTypes } from "../features/jurisdiction";
 
 export default {
   title: "App",

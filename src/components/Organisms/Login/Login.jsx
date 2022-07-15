@@ -1,4 +1,4 @@
-import { Modal } from "../";
+import { Modal } from "..";
 
 const Login = ({ isOpen }) => {
   return (

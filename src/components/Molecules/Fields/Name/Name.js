@@ -1,4 +1,4 @@
-import { Input } from "../../../Atoms";
+import { Input } from "../../../atoms";
 
 const Name = ({ placeholder, ...rest }) => {
   const validate = (value) => {

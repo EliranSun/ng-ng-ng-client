@@ -1,7 +1,7 @@
-import { Button } from "../../Atoms";
-import { FlowContext, FlowNames } from "../Flow";
 import { useContext } from "react";
-import { FormatMessage } from "../../../utils/intl";
+import { Button } from "../../atoms";
+import { FlowContext, FlowNames } from "../Flow";
+import { FormatMessage } from "../../../lib/intl";
 
 const SiteHeader = () => {
   const { setFlowName } = useContext(FlowContext);
