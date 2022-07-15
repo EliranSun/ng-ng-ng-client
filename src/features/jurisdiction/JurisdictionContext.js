@@ -2,12 +2,12 @@ import { useState, useEffect, createContext } from "react";
 import noop from "lodash.noop";
 import { JurisdictionTypes } from "./constants";
 
-export const JurisdictionContext = createContext({
+const JurisdictionContext = createContext({
   jurisdiction: JurisdictionTypes.Spain,
   handleJurisdictionChange: noop,
 });
 
-export const JurisdictionProvider = ({
+const JurisdictionProvider = ({
   jurisdiction: initJurisdiction = JurisdictionTypes.Spain,
   children,
 }) => {
@@ -31,3 +31,5 @@ export const JurisdictionProvider = ({
     </JurisdictionContext.Provider>
   );
 };
+
+export { JurisdictionContext, JurisdictionProvider };

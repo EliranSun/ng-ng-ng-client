@@ -64,13 +64,13 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/node-logger": "^6.4.9",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.4.9",
-    "faker": "^5.5.3",
     "msw": "^0.35.0",
     "msw-storybook-addon": "^1.4.1",
     "rosie": "^2.1.0",

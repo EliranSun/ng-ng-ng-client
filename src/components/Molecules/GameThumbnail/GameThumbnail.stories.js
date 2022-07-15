@@ -1,5 +1,5 @@
 import React from "react";
-import { random } from "faker";
+import { faker } from "@faker-js/faker";
 
 import GameThumbnail from "./GameThumbnail";
 
@@ -16,5 +16,5 @@ const Template = (args) => <GameThumbnail {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-  imageUrl: random.image(),
+  imageUrl: faker.image.imageUrl(),
 };
